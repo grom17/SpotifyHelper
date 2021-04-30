@@ -51,6 +51,8 @@ namespace SpotifyHelper
                         select $"{name}\r\n{string.Join("\r\n", similarNames)}").ToList();
 
                 Console.WriteLine(duplicates.Any() ? string.Join(Environment.NewLine, duplicates) : "No duplicates found." );
+
+                Console.ReadKey();
             }
             catch (APIException e)
             {
